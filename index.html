@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+  <style>
+
+    body {
+      background: #154687;
+      font-family: 'Poppins', sans-serif;
+      color: #fff
+      ;
+    }
+
+    .container {
+      background: #fff;
+      width: 500px; 
+      margin: 50px auto;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    }
+
+    h1 {
+      text-align: center; 
+      margin-top: 0;
+    }
+
+    main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    label {
+      font-weight: bold;
+      margin-bottom: 5px;
+      display: block;
+    }
+
+    input[type="url"] {
+      padding: 8px;
+      width: 300px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      display: block;
+    }
+
+    button {
+      text-align: center;
+      text-transform: uppercase;
+      background: #FAE81D;
+      color: #000;
+      border: none;
+      border-radius: 8px;
+      transition: all 500ms ease;
+      padding: 16px 48px;
+      margin: 32px auto;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+    }
+
+    #url-list {
+      margin-top: 20px;
+      max-height: 300px;
+      overflow-y: scroll;
+      border: 1px solid #ccc;
+      padding: 10px;
+      background: #ffffff;
+      color: #000000;
+      width: 50%;
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <header>
+    <h1>XML Sitemap URL Extractor</h1>
+  </header>
+
+  <main>
+    <form id="sitemap-form">
+      <input type="url" id="sitemap-url" placeholder="Enter sitemap URL..." required>
+      <button type="submit">Extract URLs</button>
+    </form>
+  
+    <div id="url-list"></div>
+    <div id="error"></div>
+  </main>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
